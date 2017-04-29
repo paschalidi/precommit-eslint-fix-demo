@@ -9,7 +9,7 @@ fi
 
 STAGED_FILES=($(git diff --cached --name-only --diff-filter=ACM))
 
-echo "ESLint'ing ${#STAGED_FILES[@]} files"
+echo ">>> PRE-COMMIT Staged Files: ${STAGED_FILES[@]}"
 
 if [[ "$STAGED_FILES" = "" ]]; then
   exit 0

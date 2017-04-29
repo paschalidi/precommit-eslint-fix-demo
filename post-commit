@@ -6,6 +6,6 @@ if [[ "$STAGED_FILES" = "" ]]; then
   exit 0
 fi
 
-# Re-add files since they may have been fixed
+echo ">>> POST-COMMIT Staged Files: ${STAGED_FILES[@]}"
 git reset -q "${STAGED_FILES[@]}"
 exit 0
