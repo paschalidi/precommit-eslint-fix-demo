@@ -15,7 +15,7 @@ The only way I've been able to resolve this issue is by using a post-commit hook
 I'm definitely NOT a Git Guru, so if anyone has experience with this or can help in any way it will be greatly appreciated.
 
 To use the post-commit method:
-1. Copy the `pre-commit` file into your git hooks directory `cp post-commit .git/hooks/.`
+1. Copy the `post-commit` file into your git hooks directory `cp post-commit .git/hooks/.`
 1. Follow steps 2. and 3. from above.
 1. Now everything should be as expected.
 
