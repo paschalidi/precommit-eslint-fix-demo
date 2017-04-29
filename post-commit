@@ -1,0 +1,11 @@
+#!/bin/bash
+cd "$(git rev-parse --show-toplevel)"
+STAGED_FILES=($(git diff --cached --name-only --diff-filter=ACM | grep ".jsx\{0,1\}$"))
+
+if [[ "$STAGED_FILES" = "" ]]; then
+  exit 0
+fi
+
+# Re-add files since they may have been fixed
+git reset -q "${STAGED_FILES[@]}"
+exit 0
